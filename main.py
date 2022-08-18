@@ -16,6 +16,9 @@ import random
 destination_list = ['Maldives', 'Paris', 'Maui', 'Tokyo', 'Rome']
 destination = random.choice(destination_list)
 
+mode_of_transportation = ['taxi', 'bus', 'cycle', 'ferry', 'rental car', 'train', 'metro', 'ride-sharing']
+mode_of_transportation1 = random.choice(mode_of_transportation)
+
 restaurant_maldives = ['Ithaa Undersea Restaurant', 'REETHI Restaurant', 'M6M Restaurant', 'Bokkura Restaurant', 'Symphony Restaurant']
 restaurant1 = random.choice(restaurant_maldives)
 restaurant_paris = ['Bistrot Alexandre III', 'Restaurant Guy Savoy', 'Epicure', 'ASPIC', 'La Table de Colette']
@@ -26,9 +29,6 @@ restaurant_tokyo = ["Narisawa", "Ise Sueyoshi", "L'Effervescence", "Toufuya Ukai
 restaurant4 = random.choice(restaurant_tokyo)
 restaurant_rome = ['Ercoli Trastevere', 'Poldo e Gianna Osteria', 'Roscioli Salumeria con Cucina', 'Retrobottega', 'Roma Sparita']
 restaurant5 = random.choice(restaurant_rome)
-
-mode_of_transportation = ['taxi', 'bus', 'cycle', 'ferry', 'rental car', 'train', 'metro', 'ride-sharing']
-mode_of_transportation1 = random.choice(mode_of_transportation)
 
 entertainment_maldives = ['Whale & Dolphin Watching', 'Diving', 'Snorkeling']
 entertainment1 = random.choice(entertainment_maldives)
@@ -48,25 +48,72 @@ print (greeting)
 print('We have selected' + ' ' + random.choice(destination_list) + ' ' + 'for your destination! Does this sound good?')
 
 def user_answer(user_choice):
+    destination = random.choice(destination_list)
     for choice in user_choice:
         if choice == 'y':
-            print("Awesome! Glad that is decided let's move on!" .format(random.choice(destination_list)))
+            print("Awesome! Glad that is decided let's move on!")
         elif choice == 'n':
-            print(f"Oh, sorry you don't like this destination. No worries, we can try something else! How about {random.choice(destination_list)}?")
+            print(f"Oh, sorry you don't like this destination. No worries, we can try something else! How about {destination}?")
             user_answer(input('Enter y/n: '))
-    return user_choice
+    return destination
 
 user_answer(input('Enter y/n: '))
+chosen_destination = destination
 
-print('We have selected' + ' ' + random.choice(mode_of_transportation) + ' ' + 'for your transportation option! Does this sound good?')
+print('We have selected' + ' ' + mode_of_transportation1 + ' ' + 'for your transportation option! Does this sound good?')
 
 def user_answer2 (user_choice2):
     for choice in user_choice2:
+        transportation = mode_of_transportation1
         if choice == 'y':
-            print("Awesome! Glad that is decided let's move on!" .format(random.choice(mode_of_transportation)))
+            print("Awesome! Glad that is decided let's move on!")
         elif choice == 'n':
             print(f"Oh, sorry you don't like this transportation option. No worries, we can try something else! How about {random.choice(mode_of_transportation)}?")
             user_answer2(input('Enter y/n: '))
-    return user_choice2
+    return transportation
 
 user_answer2(input('Enter y/n: '))
+
+destination = format(random.choice(destination_list))
+
+for chosen_destination in destination:
+    if destination == 'Maldives':
+        print('We have selected' + ' ' + entertainment1  + ' ' + 'for your entertainment option! Does this sound good?')
+        user_answer3 = (input('Enter y/n: '))
+        if user_answer3 == 'y':
+            print("Awesome! Glad that is decided let's move on!")
+        elif user_answer3 == 'n':
+            print((f"Oh, sorry you don't like this entertainment option. No worries, we can try something else! How about {random.choice(entertainment1)}?"))
+            user_answer3 = (input('Enter y/n: '))
+    if destination == 'Paris':
+        print('We have selected' + ' ' + entertainment2  + ' ' + 'for your entertainment option! Does this sound good?')
+        user_answer3 = (input('Enter y/n: '))
+        if user_answer3 == 'y':
+                print("Awesome! Glad that is decided let's move on!")
+        elif user_answer3 == 'n':
+            print((f"Oh, sorry you don't like this entertainment option. No worries, we can try something else! How about {random.choice(entertainment2)}?"))
+            user_answer3 = (input('Enter y/n: '))
+    if destination == 'Maui':
+        print('We have selected' + ' ' + entertainment3  + ' ' + 'for your entertainment option! Does this sound good?')
+        user_answer3 = (input('Enter y/n: '))
+        if user_answer3 == 'y':
+                print("Awesome! Glad that is decided let's move on!")
+        elif user_answer3 == 'n':
+            print((f"Oh, sorry you don't like this entertainment option. No worries, we can try something else! How about {random.choice(entertainment3)}?"))
+            user_answer3 = (input('Enter y/n: '))
+    if destination == 'Tokyo':
+        print('We have selected' + ' ' + entertainment4  + ' ' + 'for your entertainment option! Does this sound good?')
+        user_answer3 = (input('Enter y/n: '))
+        if user_answer3 == 'y':
+                print("Awesome! Glad that is decided let's move on!")
+        elif user_answer3 == 'n':
+            print((f"Oh, sorry you don't like this entertainment option. No worries, we can try something else! How about {random.choice(entertainment4)}?"))
+            user_answer3 = (input('Enter y/n: '))
+    if destination == 'Rome':
+        print('We have selected' + ' ' + entertainment5  + ' ' + 'for your entertainment option! Does this sound good?')
+        user_answer3 = (input('Enter y/n: '))
+        if user_answer3 == 'y':
+                print("Awesome! Glad that is decided let's move on!")
+        elif user_answer3 == 'n':
+            print((f"Oh, sorry you don't like this entertainment option. No worries, we can try something else! How about {random.choice(entertainment5)}?"))
+            user_answer3 = (input('Enter y/n: '))
