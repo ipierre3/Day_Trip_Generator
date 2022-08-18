@@ -27,16 +27,8 @@ restaurant4 = random.choice(restaurant_tokyo)
 restaurant_rome = ['Ercoli Trastevere', 'Poldo e Gianna Osteria', 'Roscioli Salumeria con Cucina', 'Retrobottega', 'Roma Sparita']
 restaurant5 = random.choice(restaurant_rome)
 
-mode_of_transportation_maldives = ['taxi', 'bus', 'cycle', 'ferry', 'speedboat']
-mode_of_transportation1 = random.choice(mode_of_transportation_maldives)
-mode_of_transportation_paris = ['Paris Metro', 'RER Train', 'city bus','taxi']
-mode_of_transportation2 = random.choice(mode_of_transportation_paris)
-mode_of_transportation_maui = ['bus', 'rental car']
-mode_of_transportation3 = random.choice(mode_of_transportation_maui)
-mode_of_transportation_tokyo = ['bullet train', 'rental car', 'taxi', 'bus']
-mode_of_transportation4 = random.choice(mode_of_transportation_tokyo)
-mode_of_transportation_rome = ['metro', 'tram', 'rental car', 'bus']
-mode_of_transportation5 = random.choice(mode_of_transportation_rome)
+mode_of_transportation = ['taxi', 'bus', 'cycle', 'ferry', 'rental car', 'train', 'metro', 'ride-sharing']
+mode_of_transportation1 = random.choice(mode_of_transportation)
 
 entertainment_maldives = ['Whale & Dolphin Watching', 'Diving', 'Snorkeling']
 entertainment1 = random.choice(entertainment_maldives)
@@ -58,11 +50,23 @@ print('We have selected' + ' ' + random.choice(destination_list) + ' ' + 'for yo
 def user_answer(user_choice):
     for choice in user_choice:
         if choice == 'y':
-            print("Awesome! Glad that is decided let's move on!")
+            print("Awesome! Glad that is decided let's move on!" .format(random.choice(destination_list)))
         elif choice == 'n':
-            print(f"Oh, sorry you don't like this destination. No worries, we can try something else! How about {destination}?")
+            print(f"Oh, sorry you don't like this destination. No worries, we can try something else! How about {random.choice(destination_list)}?")
+            user_answer(input('Enter y/n: '))
     return user_choice
 
 user_answer(input('Enter y/n: '))
 
+print('We have selected' + ' ' + random.choice(mode_of_transportation) + ' ' + 'for your transportation option! Does this sound good?')
 
+def user_answer2 (user_choice2):
+    for choice in user_choice2:
+        if choice == 'y':
+            print("Awesome! Glad that is decided let's move on!" .format(random.choice(mode_of_transportation)))
+        elif choice == 'n':
+            print(f"Oh, sorry you don't like this transportation option. No worries, we can try something else! How about {random.choice(mode_of_transportation)}?")
+            user_answer2(input('Enter y/n: '))
+    return user_choice2
+
+user_answer2(input('Enter y/n: '))
