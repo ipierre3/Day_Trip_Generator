@@ -1,5 +1,6 @@
 # Day_Trip_Generator
 
+# Assignment
 # (5 points): As a developer, I want to make at least three commits with descriptive messages 
 # (5 points):  As a developer, I want to store my destinations, restaurants, mode of transportation, and entertainment in their own separate Lists. 
 # (5 points): As a user, I want a destination to be randomly selected for my day trip. 
